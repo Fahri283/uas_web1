@@ -6,7 +6,7 @@ include 'koneksi.php';
 $id = $_GET['id'];
 
 // Menjalankan perintah SQL untuk menghapus data berdasarkan ID [cite: 8, 92]
-mysqli_query($conn, "DELETE FROM barang WHERE id_barang='$id'");
+mysqli_query($conn, "DELETE FROM barangg WHERE id_barang='$id'");
 
 // Mengalihkan kembali halaman ke daftar produk setelah berhasil menghapus [cite: 58, 89]
 header("Location: dashboard.php?page=listproducts");

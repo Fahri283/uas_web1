@@ -17,7 +17,7 @@ header("Location: dashboard.php?page=listproducts");
 }
 /* AMBIL DATA */
 $data = mysqli_fetch_assoc(
-mysqli_query($conn, "SELECT * FROM barang WHERE id_barang='$id'")
+mysqli_query($conn, "SELECT * FROM barangg WHERE id_barang='$id'")
 );
 ?>
 <style>

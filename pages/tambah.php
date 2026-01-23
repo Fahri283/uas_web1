@@ -8,12 +8,12 @@ $harga = $_POST['harga'];
 $stok = $_POST['stok'];
 $satuan = $_POST['satuan'];
 mysqli_query($conn, "
-INSERT INTO barang
+INSERT INTO barangg
 (kode_barang, nama_barang, kategori, harga, stok, satuan)
 VALUES
 ('$kode', '$nama', '$kategori', '$harga', '$stok', '$satuan')
 ");
-header("Location: dashboard.php?page=listproducts");
+header("Location: dashboard.php?page=tambah");
 }
 ?>
 <style>
@@ -38,7 +38,8 @@ padding-bottom: 10px;
 .form-group {
 margin-bottom: 15px;
 }
-label {display: block;
+label {
+    display: block;
 font-weight: bold;
 margin-bottom: 6px;
 }
@@ -83,7 +84,8 @@ background: #a93226;
 <label>Kode Barang</label>
 <input type="text" name="kode_barang" placeholder="" required>
 </div>
-<div class="form-group"><label>Nama Barang</label>
+<div class="form-group">
+    <label>Nama Barang</label>
 <input type="text" name="nama_barang" placeholder="" required>
 </div>
 <div class="form-group">
@@ -112,10 +114,11 @@ background: #a93226;
 <option value="pcs">pcs</option>
 <option value="box">box</option>
 <option value="kg">kg</option>
+<option value="kg">kg</option>
 <option value="liter">liter</option>
 </select>
 </div>
 <button type="submit" name="simpan" class="btn btn-tambah">Simpan</button>
-<a href="dashboard.php?page=listproducts" class="btn btn-hapus">Batal</a>
+<a href="dashboard.php?page=tambah" class="btn btn-hapus">Batal</a>
 </form>
 </div>
